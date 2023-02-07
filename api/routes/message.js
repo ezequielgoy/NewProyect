@@ -22,7 +22,7 @@ router.put("/read/:roomid"), async (req,res) =>{
     try{
         const message = await Message.find({roomId: req.params.roomid})
         const updatedMessages = message.update({$set: {state : true}})
-        res.status(200).json(updatedMessage)
+        res.status(200).json(updatedMessages)
     }catch(err){
         res.status(500).json(err)
     }

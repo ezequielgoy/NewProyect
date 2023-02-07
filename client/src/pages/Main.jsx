@@ -31,7 +31,7 @@ function Main() {
        
         };
         getUserRooms();
-    }, [user])
+    }, [user/*, handleCreateRoom*/])
 
 
     const handleCreateRoom = async (e)=>{
